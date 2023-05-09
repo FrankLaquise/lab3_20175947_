@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navgraph"
+    app:startDestination="@id/inicioFragment2">
+
+    <fragment
+        android:id="@+id/inicioFragment2"
+        android:name="com.example.a20175947_lab3.InicioFragment"
+        android:label="fragment_inicio"
+        tools:layout="@layout/fragment_inicio" >
+        <action
+            android:id="@+id/action_inicioFragment2_to_registroFragment"
+            app:destination="@id/registroFragment" />
+        <action
+            android:id="@+id/action_inicioFragment2_to_historialFragment"
+            app:destination="@id/historialFragment" />
+        <action
+            android:id="@+id/action_inicioFragment2_to_emergenciaFragment"
+            app:destination="@id/emergenciaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registroFragment"
+        android:name="com.example.a20175947_lab3.RegistroFragment"
+        android:label="fragment_registro"
+        tools:layout="@layout/fragment_registro" >
+        <action
+            android:id="@+id/action_registroFragment_to_inicioFragment2"
+            app:destination="@id/inicioFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/historialFragment"
+        android:name="com.example.a20175947_lab3.HistorialFragment"
+        android:label="fragment_historial"
+        tools:layout="@layout/fragment_historial" />
+    <fragment
+        android:id="@+id/emergenciaFragment"
+        android:name="com.example.a20175947_lab3.EmergenciaFragment"
+        android:label="fragment_emergencia"
+        tools:layout="@layout/fragment_emergencia" />
+</navigation>
